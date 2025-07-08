@@ -1,122 +1,71 @@
 import Header from "@/components/Header";
-import { Card, CardContent } from "@/components/ui/card";
-import { Eye, Target, Lightbulb, Globe } from "lucide-react";
+import { Globe, Star } from "lucide-react";
+import { Link } from "react-router-dom";
+import { Button } from "@/components/ui/button";
 
 const MisionVision = () => {
-  const objetivos = [
-    {
-      icon: Globe,
-      title: "Expansión Nacional",
-      description: "Consolidar nuestra presencia en todo el territorio chileno, llegando a más empresas y regiones."
-    },
-    {
-      icon: Lightbulb,
-      title: "Innovación Continua",
-      description: "Implementar nuevas tecnologías y procesos para mejorar continuamente nuestros servicios."
-    }
-  ];
-
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-gradient-hero">
       <Header />
       
       {/* Hero Section */}
-      <section className="bg-gradient-hero py-20">
+      <section className="py-20">
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-4xl md:text-6xl font-bold mb-6">
             Misión y <span className="text-primary">Visión</span>
           </h1>
-          <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            Nuestro propósito y hacia dónde nos dirigimos como empresa
+          <p className="text-lg text-muted-foreground max-w-3xl mx-auto mb-6">
+            Conoce nuestros propósitos y objetivos como empresa
           </p>
+          <div className="w-16 h-1 bg-primary mx-auto"></div>
         </div>
       </section>
 
-      {/* Misión y Visión */}
-      <section className="py-20">
+      {/* Content Section */}
+      <section className="py-12">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
+          <div className="max-w-4xl mx-auto space-y-8">
             {/* Misión */}
-            <Card className="hover:shadow-xl transition-shadow">
-              <CardContent className="p-8">
-                <div className="text-center mb-6">
-                  <div className="w-20 h-20 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <Target className="w-10 h-10 text-primary" />
-                  </div>
-                  <h2 className="text-3xl font-bold text-primary">Nuestra Misión</h2>
+            <div className="bg-white rounded-2xl p-8 shadow-xl">
+              <div className="flex items-start space-x-4 mb-6">
+                <div className="w-12 h-12 bg-primary rounded-xl flex items-center justify-center flex-shrink-0">
+                  <Globe className="w-6 h-6 text-white" />
                 </div>
-                
-                <p className="text-lg text-muted-foreground leading-relaxed text-center">
-                  Ser el socio estratégico más confiable en suministros para empresas en Chile, 
-                  ofreciendo productos de alta calidad en alimentos, aseo y escritorio, con un 
-                  servicio excepcional, entregas puntuales y atención personalizada que impulse 
-                  el éxito de nuestros clientes.
-                </p>
-              </CardContent>
-            </Card>
+                <h2 className="text-2xl font-bold text-primary">🌍 Misión</h2>
+              </div>
+              
+              <p className="text-lg text-muted-foreground leading-relaxed">
+                Brindar productos esenciales de primera necesidad —como alimentos, artículos de aseo 
+                y material de oficina— con altos estándares de calidad, atención personalizada y 
+                cumplimiento oportuno, mejorando así la experiencia de compra de nuestros clientes 
+                del sector público y privado.
+              </p>
+            </div>
 
             {/* Visión */}
-            <Card className="hover:shadow-xl transition-shadow">
-              <CardContent className="p-8">
-                <div className="text-center mb-6">
-                  <div className="w-20 h-20 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <Eye className="w-10 h-10 text-primary" />
-                  </div>
-                  <h2 className="text-3xl font-bold text-primary">Nuestra Visión</h2>
+            <div className="bg-white rounded-2xl p-8 shadow-xl">
+              <div className="flex items-start space-x-4 mb-6">
+                <div className="w-12 h-12 bg-primary rounded-xl flex items-center justify-center flex-shrink-0">
+                  <Star className="w-6 h-6 text-white" />
                 </div>
-                
-                <p className="text-lg text-muted-foreground leading-relaxed text-center">
-                  Consolidarnos como la empresa líder en suministros corporativos en Chile, 
-                  reconocidos por nuestra excelencia operacional, innovación en servicios 
-                  y el impacto positivo que generamos en el crecimiento y eficiencia de 
-                  nuestros clientes.
-                </p>
-              </CardContent>
-            </Card>
-          </div>
-        </div>
-      </section>
+                <h2 className="text-2xl font-bold text-primary">🌟 Visión</h2>
+              </div>
+              
+              <p className="text-lg text-muted-foreground leading-relaxed">
+                Ser una empresa reconocida a nivel nacional por su excelencia en servicio, 
+                confiabilidad y capacidad de respuesta, posicionándonos como líderes en el 
+                suministro integral para instituciones y consumidores individuales.
+              </p>
+            </div>
 
-      {/* Objetivos Estratégicos */}
-      <section className="py-20 bg-gradient-section">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">Objetivos Estratégicos</h2>
-            <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-              Las metas que nos guían hacia el cumplimiento de nuestra visión
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-            {objetivos.map((objetivo, index) => (
-              <Card key={index} className="text-center hover:shadow-lg transition-shadow">
-                <CardContent className="p-8">
-                  <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
-                    <objetivo.icon className="w-8 h-8 text-primary" />
-                  </div>
-                  <h3 className="text-xl font-semibold mb-4">{objetivo.title}</h3>
-                  <p className="text-muted-foreground leading-relaxed">{objetivo.description}</p>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Compromiso */}
-      <section className="py-20">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">Nuestro Compromiso</h2>
-            <p className="text-lg text-muted-foreground leading-relaxed mb-8">
-              En Peka SPA, nos comprometemos a mantener los más altos estándares de calidad y servicio. 
-              Trabajamos día a día para superar las expectativas de nuestros clientes, contribuyendo 
-              al éxito de sus operaciones y al crecimiento sostenible de sus negocios.
-            </p>
-            <p className="text-lg text-muted-foreground leading-relaxed">
-              Creemos que el éxito de nuestros clientes es nuestro éxito, y por eso ponemos todo 
-              nuestro empeño en ser el mejor socio estratégico que puedan tener.
-            </p>
+            {/* Botón Volver */}
+            <div className="text-center pt-8">
+              <Link to="/">
+                <Button className="bg-primary hover:bg-primary/90 text-white px-8 py-3">
+                  Volver al Inicio
+                </Button>
+              </Link>
+            </div>
           </div>
         </div>
       </section>

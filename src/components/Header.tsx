@@ -1,4 +1,5 @@
 import pekaLogo from "/lovable-uploads/3b9d0156-ef83-4a68-aeef-14fed12c1086.png";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   return (
@@ -14,24 +15,24 @@ const Header = () => {
           </div>
           
           <nav className="hidden md:flex space-x-8">
-            <a 
-              href="/" 
+            <Link 
+              to="/" 
               className="text-primary hover:text-primary/80 font-medium transition-colors"
             >
               Inicio
-            </a>
-            <a 
-              href="/quienes-somos" 
+            </Link>
+            <Link 
+              to="/quienes-somos" 
               className="text-foreground hover:text-primary font-medium transition-colors"
             >
               Quiénes Somos
-            </a>
-            <a 
-              href="/mision-vision" 
+            </Link>
+            <Link 
+              to="/mision-vision" 
               className="text-foreground hover:text-primary font-medium transition-colors"
             >
               Misión y Visión
-            </a>
+            </Link>
             <a 
               href="#contacto" 
               className="text-foreground hover:text-primary font-medium transition-colors"
