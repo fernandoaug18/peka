@@ -41,70 +41,27 @@ const ContactSection = () => {
   return (
     <section id="contacto" className="py-20 bg-gradient-section">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">
-            Contacto
-          </h2>
-          <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-            ¿Tienes alguna consulta o necesitas una cotización? Contáctanos y te ayudaremos
-          </p>
-        </div>
-
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
-          {/* Información de contacto */}
-          <div className="space-y-8">
-            <div>
-              <h3 className="text-2xl font-semibold mb-6">Información de Contacto</h3>
-              <div className="space-y-4">
-                <div className="flex items-center space-x-3">
-                  <div className="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center">
-                    <Mail className="w-5 h-5 text-primary" />
-                  </div>
-                  <div>
-                    <p className="font-medium">Email</p>
-                    <p className="text-muted-foreground">contacto@pka.cl</p>
-                  </div>
-                </div>
-                
-                <div className="flex items-center space-x-3">
-                  <div className="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center">
-                    <Phone className="w-5 h-5 text-primary" />
-                  </div>
-                  <div>
-                    <p className="font-medium">Teléfonos</p>
-                    <p className="text-muted-foreground">+56 9 3871.0599 / +56 9 4585.6240</p>
-                  </div>
-                </div>
-                
-                <div className="flex items-center space-x-3">
-                  <div className="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center">
-                    <MapPin className="w-5 h-5 text-primary" />
-                  </div>
-                  <div>
-                    <p className="font-medium">Ubicación</p>
-                    <p className="text-muted-foreground">Santiago, Chile</p>
-                  </div>
-                </div>
-              </div>
+        <div className="max-w-2xl mx-auto">
+          {/* Formulario de cotización */}
+          <div className="bg-white rounded-2xl p-8 shadow-xl">
+            <div className="text-center mb-8">
+              <h2 className="text-3xl font-bold mb-2">Solicitar Cotización</h2>
             </div>
-          </div>
 
-          {/* Formulario de contacto */}
-          <Card className="shadow-lg border-0 bg-white/80 backdrop-blur-sm">
-            <CardHeader>
-              <CardTitle>Envíanos un mensaje</CardTitle>
-            </CardHeader>
-            <CardContent>
-              <Form {...form}>
-                <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
+            <Form {...form}>
+              <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <FormField
                     control={form.control}
                     name="name"
                     render={({ field }) => (
                       <FormItem>
-                        <FormLabel>Nombre *</FormLabel>
                         <FormControl>
-                          <Input placeholder="Tu nombre completo" {...field} />
+                          <Input 
+                            placeholder="Nombre completo" 
+                            className="bg-gray-50 border-0 h-12 text-base placeholder:text-gray-400 rounded-lg"
+                            {...field} 
+                          />
                         </FormControl>
                         <FormMessage />
                       </FormItem>
@@ -116,54 +73,86 @@ const ContactSection = () => {
                     name="email"
                     render={({ field }) => (
                       <FormItem>
-                        <FormLabel>Email *</FormLabel>
                         <FormControl>
-                          <Input placeholder="tu@email.com" type="email" {...field} />
-                        </FormControl>
-                        <FormMessage />
-                      </FormItem>
-                    )}
-                  />
-                  
-                  <FormField
-                    control={form.control}
-                    name="company"
-                    render={({ field }) => (
-                      <FormItem>
-                        <FormLabel>Empresa</FormLabel>
-                        <FormControl>
-                          <Input placeholder="Nombre de tu empresa" {...field} />
-                        </FormControl>
-                        <FormMessage />
-                      </FormItem>
-                    )}
-                  />
-                  
-                  <FormField
-                    control={form.control}
-                    name="message"
-                    render={({ field }) => (
-                      <FormItem>
-                        <FormLabel>Mensaje *</FormLabel>
-                        <FormControl>
-                          <Textarea 
-                            placeholder="Cuéntanos sobre tus necesidades de suministros..."
-                            className="min-h-[120px]"
-                            {...field}
+                          <Input 
+                            placeholder="Email" 
+                            type="email" 
+                            className="bg-gray-50 border-0 h-12 text-base placeholder:text-gray-400 rounded-lg"
+                            {...field} 
                           />
                         </FormControl>
                         <FormMessage />
                       </FormItem>
                     )}
                   />
-                  
-                  <Button type="submit" className="w-full">
-                    Enviar Mensaje
-                  </Button>
-                </form>
-              </Form>
-            </CardContent>
-          </Card>
+                </div>
+                
+                <FormField
+                  control={form.control}
+                  name="company"
+                  render={({ field }) => (
+                    <FormItem>
+                      <FormControl>
+                        <Input 
+                          placeholder="Empresa / Organización" 
+                          className="bg-gray-50 border-0 h-12 text-base placeholder:text-gray-400 rounded-lg"
+                          {...field} 
+                        />
+                      </FormControl>
+                      <FormMessage />
+                    </FormItem>
+                  )}
+                />
+                
+                <FormField
+                  control={form.control}
+                  name="message"
+                  render={({ field }) => (
+                    <FormItem>
+                      <FormControl>
+                        <Textarea 
+                          placeholder="Describe los productos que necesitas..."
+                          className="bg-gray-50 border-0 min-h-[120px] text-base placeholder:text-gray-400 rounded-lg resize-none"
+                          {...field}
+                        />
+                      </FormControl>
+                      <FormMessage />
+                    </FormItem>
+                  )}
+                />
+                
+                <Button 
+                  type="submit" 
+                  className="w-full h-12 text-base font-semibold bg-primary hover:bg-primary/90 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300"
+                >
+                  Enviar Solicitud
+                </Button>
+              </form>
+            </Form>
+          </div>
+
+          {/* Información de contacto debajo */}
+          <div className="mt-12 text-center space-y-6">
+            <div>
+              <h3 className="text-xl font-semibold mb-4">Información de Contacto</h3>
+              <div className="space-y-3">
+                <div className="flex items-center justify-center space-x-3">
+                  <Mail className="w-5 h-5 text-primary" />
+                  <span className="text-muted-foreground">contacto@pka.cl</span>
+                </div>
+                
+                <div className="flex items-center justify-center space-x-3">
+                  <Phone className="w-5 h-5 text-primary" />
+                  <span className="text-muted-foreground">+56 9 3871.0599 / +56 9 4585.6240</span>
+                </div>
+                
+                <div className="flex items-center justify-center space-x-3">
+                  <MapPin className="w-5 h-5 text-primary" />
+                  <span className="text-muted-foreground">Santiago, Chile</span>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
