@@ -49,7 +49,7 @@ const FacilitiesSection = () => {
         {/* Primera fila: 3 imágenes */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
           {facilities.slice(0, 3).map((facility, index) => (
-            <div key={index} className="bg-card rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
+            <div key={index} className="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
               <div className="aspect-video overflow-hidden">
                 <img 
                   src={facility.image} 
@@ -69,7 +69,7 @@ const FacilitiesSection = () => {
         <div className="flex justify-center">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl">
             {facilities.slice(3, 5).map((facility, index) => (
-              <div key={index + 3} className="bg-card rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
+              <div key={index + 3} className="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
                 <div className="aspect-video overflow-hidden">
                   <img 
                     src={facility.image} 
