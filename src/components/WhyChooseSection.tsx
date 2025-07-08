@@ -39,7 +39,7 @@ const WhyChooseSection = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
-            ¿Por Qué Elegir <span className="text-peka-brand">Peka SPA</span>?
+            ¿Por Qué Elegir Peka SPA?
           </h2>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
             Somos tu socio estratégico que responde con eficiencia, cercanía y calidad, 
