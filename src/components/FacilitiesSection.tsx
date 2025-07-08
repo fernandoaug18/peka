@@ -1,6 +1,6 @@
-import warehouseImage from "@/assets/warehouse-storage.jpg";
-import transportImage from "@/assets/transport-fleet.jpg";
-import distributionImage from "@/assets/distribution-center.jpg";
+import warehouseImage from "/lovable-uploads/bdfabdd1-8229-4038-a3ab-13340a976205.png";
+import transportImage from "/lovable-uploads/61505c94-9ef6-4946-86d8-2a4911c09dc3.png";
+import distributionImage from "/lovable-uploads/32c6ff8f-93aa-4247-b72a-0e9dd01dc501.png";
 
 const facilities = [
   {

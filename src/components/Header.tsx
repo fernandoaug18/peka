@@ -1,4 +1,4 @@
-import pekaLogo from "@/assets/peka-logo.png";
+import pekaLogo from "/lovable-uploads/3b9d0156-ef83-4a68-aeef-14fed12c1086.png";
 
 const Header = () => {
   return (
