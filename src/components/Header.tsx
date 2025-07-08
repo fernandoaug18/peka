@@ -15,22 +15,28 @@ const Header = () => {
           
           <nav className="hidden md:flex space-x-8">
             <a 
-              href="#inicio" 
+              href="/" 
               className="text-primary hover:text-primary/80 font-medium transition-colors"
             >
               Inicio
             </a>
             <a 
-              href="#quienes-somos" 
+              href="/quienes-somos" 
               className="text-foreground hover:text-primary font-medium transition-colors"
             >
               Quiénes Somos
             </a>
             <a 
-              href="#mision-vision" 
+              href="/mision-vision" 
               className="text-foreground hover:text-primary font-medium transition-colors"
             >
               Misión y Visión
+            </a>
+            <a 
+              href="#contacto" 
+              className="text-foreground hover:text-primary font-medium transition-colors"
+            >
+              Contacto
             </a>
           </nav>
         </div>
