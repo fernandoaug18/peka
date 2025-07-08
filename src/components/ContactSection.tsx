@@ -124,6 +124,7 @@ const ContactSection = () => {
                 <Button 
                   type="submit" 
                   className="w-full h-12 text-base font-semibold bg-purple-700 hover:bg-purple-800 text-white rounded-lg shadow-lg hover:shadow-xl transition-all duration-300"
+                  onClick={() => window.location.href = 'mailto:contacto@pka.cl'}
                 >
                   Enviar Solicitud
                 </Button>

@@ -25,7 +25,11 @@ const HeroSection = () => {
             personalizada para todo Chile.
           </p>
           
-          <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-4 text-lg font-semibold rounded-lg shadow-lg hover:shadow-xl transition-all duration-300">
+          <Button 
+            size="lg" 
+            className="bg-purple-700 hover:bg-purple-800 text-white px-8 py-4 text-lg font-semibold rounded-lg shadow-lg hover:shadow-xl transition-all duration-300"
+            onClick={() => window.location.href = 'mailto:contacto@pka.cl'}
+          >
             Solicitar Cotización
           </Button>
         </div>
