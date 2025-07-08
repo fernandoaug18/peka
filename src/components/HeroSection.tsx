@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 
 const HeroSection = () => {
   return (
-    <section className="bg-gradient-to-br from-slate-50 to-slate-100 py-20 min-h-[80vh] flex items-center">
+    <section className="bg-gradient-hero py-20 min-h-[80vh] flex items-center">
       <div className="container mx-auto px-4 text-center">
         <div className="max-w-4xl mx-auto">
           <div className="mb-8">
@@ -25,7 +25,7 @@ const HeroSection = () => {
             personalizada para todo Chile.
           </p>
           
-          <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-4 text-lg font-semibold rounded-lg">
+          <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-4 text-lg font-semibold rounded-lg shadow-lg hover:shadow-xl transition-all duration-300">
             Solicitar Cotización
           </Button>
         </div>

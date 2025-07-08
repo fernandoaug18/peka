@@ -90,7 +90,7 @@ const ContactSection = () => {
           </div>
 
           {/* Formulario de contacto */}
-          <Card>
+          <Card className="shadow-lg border-0 bg-white/80 backdrop-blur-sm">
             <CardHeader>
               <CardTitle>Envíanos un mensaje</CardTitle>
             </CardHeader>
