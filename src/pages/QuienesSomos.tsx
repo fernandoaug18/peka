@@ -31,7 +31,7 @@ const QuienesSomos = () => {
               </div>
               
               <p className="text-lg text-muted-foreground leading-relaxed mb-8">
-                En Peka SPA, nos dedicamos a la venta de alimentos, productos de aseo y artículos de 
+                En <span className="text-peka-brand font-semibold">Peka SPA</span>, nos dedicamos a la venta de alimentos, productos de aseo y artículos de 
                 escritorio, entregando soluciones prácticas y confiables tanto a organismos públicos 
                 como a clientes particulares en todo Chile. Nuestro compromiso es ser un socio 
                 estratégico que responda con eficiencia, cercanía y calidad.

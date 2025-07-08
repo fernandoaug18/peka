@@ -65,6 +65,8 @@ extend: {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
+				},
+				'peka-brand': 'hsl(var(--peka-brand))'
 				}
 			},
 			borderRadius: {

@@ -16,7 +16,7 @@ const HeroSection = () => {
           
           <h1 className="text-4xl md:text-6xl font-bold mb-6">
             Bienvenido a{" "}
-            <span className="text-orange-500">Peka SPA</span>
+            <span className="text-peka-brand">Peka SPA</span>
           </h1>
           
           <p className="text-lg md:text-xl text-muted-foreground mb-8 max-w-3xl mx-auto leading-relaxed">
