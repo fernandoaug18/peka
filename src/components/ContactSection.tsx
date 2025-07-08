@@ -43,7 +43,7 @@ const ContactSection = () => {
       <div className="container mx-auto px-4">
         <div className="max-w-2xl mx-auto">
           {/* Formulario de cotización */}
-          <div className="bg-white rounded-2xl p-8 shadow-xl">
+          <div className="bg-gray-100 rounded-2xl p-8 shadow-xl">
             <div className="text-center mb-8">
               <h2 className="text-3xl font-bold mb-2">Solicitar Cotización</h2>
             </div>
